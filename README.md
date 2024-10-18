@@ -20,7 +20,7 @@ To get started with either the initial setup or the final version, follow these 
 1. **Clone the Repository**:
 
     ```bash
-    git clone https://github.com/nikandr-surkov/DonkeyTap.git
+    git clone https://github.com/DonkeyTap.git
     cd DonkeyTap
     ```
 
@@ -74,4 +74,3 @@ To get started with either the initial setup or the final version, follow these 
 
 ## Contact
 
-For any inquiries, please contact me on Telegram: [Nikandr Surkov](https://t.me/nikandr_s).
