@@ -1,0 +1,188 @@
+/* Общие стили контейнера */
+.earn-container {
+  padding: 1rem;
+  background: linear-gradient(to bottom right, #3b82f6, #1e3a8a); /* Градиент на основе твоих цветов */
+  min-height: calc(100vh - 100px); /* Отнимаем высоту навигации */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white; /* Белый текст для контраста */
+  font-family: 'Press Start 2P', cursive; /* Игровой шрифт */
+  position: relative; /* Для позиционирования дочерних элементов */
+}
+
+/* Стили заголовков */
+.earn-container h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fbbf24; /* Желтый заголовок */
+  margin: 1rem 0; /* Увеличенные отступы сверху и снизу */
+  text-align: center;
+  text-shadow: 0 2px 5px rgba(251, 191, 36, 0.7); /* Легкая тень */
+}
+
+.earn-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff; /* Белый подзаголовок */
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.2); /* Легкая белая тень */
+}
+
+/* Стили списка заданий */
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 24rem;
+  overflow-y: auto;
+  max-height: 70vh;
+  padding-right: 0.5rem;
+}
+
+/* Стили для отдельного задания */
+.task-item {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон */
+  border: 2px solid rgba(251, 191, 36, 0.8); /* Желтая рамка */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0px 0px 15px 5px rgba(251, 191, 36, 0.4); /* Мягкая тень */
+}
+
+.task-item:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2); /* Более светлый фон при наведении */
+}
+
+.task-item.completed {
+  background-color: rgba(0, 255, 0, 0.3);
+  border-color: #00ff00;
+}
+
+/* Стили для описания задания */
+.task-details {
+  font-size: 0.875rem;
+  color: #cfcfcf;
+  margin-top: 0.5rem;
+}
+
+/* Стили кнопки задания */
+.task-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #fbbf24, #1e3a8a); /* Градиент кнопки с твоими цветами */
+  color: white;
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 2px rgba(251, 191, 36, 0.6); /* Мягкая тень */
+}
+
+.task-button:hover:not(.completed) {
+  transform: scale(1.1);
+  background: linear-gradient(to right, #1e3a8a, #fbbf24); /* Градиент при наведении */
+}
+
+.task-button.completed {
+  background-color: #00cc00;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Стили для иконок ссылок */
+.link-icon {
+  margin-left: 0.5rem;
+  display: inline-block;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+/* Стили для загрузочного индикатора */
+.loading-spinner {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fbbf24;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.task-button.loading {
+  background-color: #ff8800;
+  cursor: wait;
+}
+
+/* Адаптивные стили для мобильных экранов */
+@media (max-width: 768px) {
+  .earn-container {
+    padding: 0.5rem; /* Уменьшаем отступы для мобильных */
+  }
+
+  .earn-container h1 {
+    font-size: 2rem;
+  }
+
+  .task-item {
+    padding: 0.75rem;
+  }
+
+  .task-button {
+    font-size: 0.75rem;
+  }
+
+  .task-details {
+    font-size: 0.75rem;
+  }
+
+  .tasks-container {
+    max-height: 60vh;
+  }
+}
+
+/* Стили для крупных экранов */
+@media (min-width: 769px) {
+  .earn-container {
+    padding: 2rem; /* Увеличиваем отступы для больших экранов */
+  }
+
+  .tasks-container {
+    max-width: 30rem; /* Увеличиваем максимальную ширину для больших экранов */
+  }
+}
+
+/* Отступ для навигации */
+@media (min-height: 800px) {
+  .earn-container {
+    min-height: calc(100vh - 100px); /* Отнимаем высоту навигации */
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    font-size: 20px;
+  }
+
+  .main-screen {
+    padding: 10px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+}

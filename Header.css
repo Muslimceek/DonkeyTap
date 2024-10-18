@@ -1,0 +1,103 @@
+/* Основные стили */
+body {
+    background-color: #121212; /* Темный фон для лучшего контраста */
+    font-family: 'Roboto', sans-serif; /* Шрифт Roboto */
+    color: #ffffff; /* Белый текст для лучшей читаемости */
+    margin: 0; /* Убираем отступы по умолчанию */
+    padding: 0; /* Убираем отступы по умолчанию */
+    overflow-x: hidden; /* Отключаем горизонтальный скроллинг */
+}
+
+/* Градиенты для фона заголовка */
+.header-bg {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(30, 58, 138, 0.9)); /* Полупрозрачный градиент с темными цветами */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Стили для кнопок */
+.button {
+    background: linear-gradient(90deg, #fbbf24, #3b82f6); /* Градиент кнопки */
+    border: none;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, filter 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(90deg, #3b82f6, #fbbf24); /* Обратный градиент при наведении */
+    filter: brightness(1.1);
+}
+
+/* Стили для прогресса */
+.progress-gradient {
+    background: linear-gradient(90deg, #fbbf24, #3b82f6); /* Градиент для прогресс-бара */
+    border-radius: 10px;
+}
+
+/* Стили для текста */
+.text-neon {
+    color: #fbbf24; /* Неоновый цвет */
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.8), 0 0 20px rgba(251, 191, 36, 0.6);
+}
+
+/* Стили для иконки */
+.icon-container {
+    background: linear-gradient(to right, #3b82f6, #fbbf24); /* Градиент для иконки */
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Стили для уведомления о бонусе */
+.bonus-message {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fbbf24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .header-bg {
+        padding: 15px;
+    }
+
+    .icon-container {
+        padding: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .button {
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .header {
+      font-size: 20px;
+    }
+  
+    .main-screen {
+      padding: 10px;
+    }
+  
+    .nav-link {
+      font-size: 14px;
+    }
+  }

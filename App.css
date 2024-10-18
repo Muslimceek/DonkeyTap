@@ -1,0 +1,144 @@
+/* App.css */
+.bg-gradient-to-b {
+  background: linear-gradient(to bottom, #3b82f6, #1e3a8a); /* Более насыщенный градиент */
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-white {
+  color: white;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.max-w-xl {
+  max-width: 28rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.space-x-2 {
+  margin-right: 0.5rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.text-yellow-300 {
+  color: #fbbf24;
+}
+
+/* New Animation for Click Effect */
+@keyframes float {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px); /* Добавлено больше плавного движения */
+  }
+}
+
+.circle-outer {
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)); /* Добавлен лёгкий световой эффект */
+  transition: transform 0.2s ease; /* Плавное увеличение при наведении */
+  position: relative;
+  cursor: pointer;
+}
+
+.circle-outer:hover {
+  transform: scale(1.1); /* Эффект увеличения при наведении */
+}
+
+.circle-inner {
+  background-color: rgba(255, 255, 255, 0.1); /* Лёгкий фон */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.text-5xl {
+  font-size: 3rem;
+}
+
+/* Bottom navigation animation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.BottomNavigation {
+  animation: slideUp 0.5s ease-out;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 28rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 15px 15px 0 0;
+}
+
+/* Adapting sizes for smaller screens */
+@media (max-width: 600px) {
+  .text-4xl {
+    font-size: 1.75rem;
+  }
+
+  .circle-outer {
+    width: 70%;
+    height: 70%;
+  }
+
+  .circle-inner {
+    padding: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    font-size: 20px;
+  }
+
+  .main-screen {
+    padding: 10px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+}

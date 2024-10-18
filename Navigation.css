@@ -1,0 +1,151 @@
+/* Основной контейнер навигации */
+.fixed-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 2rem);
+    max-width: 640px;
+    background: rgba(0, 0, 0, 0.7); /* Обновленный темный фон с прозрачностью */
+    border-radius: 24px; /* Закругленные углы */
+    display: flex;
+    justify-content: space-around; /* Более равномерное распределение кнопок */
+    align-items: center;
+    z-index: 50;
+    padding: 8px;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2); /* Светлая тень для объема */
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Плавные переходы */
+}
+
+/* Кнопки навигации в стиле с эффектами */
+.nav-button {
+    position: relative; /* Для анимации */
+    flex: 1; /* Кнопки занимают равное пространство */
+    padding: 12px;
+    border: none;
+    border-radius: 16px; /* Закругленные углы для кнопок */
+    overflow: hidden; /* Скрытие лишних элементов */
+    color: #fbbf24; /* Обновленный цвет текста */
+    background-color: transparent; /* Прозрачный фон */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out, background 0.2s ease; /* Плавные переходы для кнопок */
+}
+
+/* Эффект при наведении */
+.nav-button:hover {
+    transform: translateY(-4px) scale(1.05); /* Легкий подъем и увеличение */
+    background-color: rgba(255, 255, 255, 0.1); /* Легкий фоновый эффект */
+}
+
+/* Светящийся эффект при нажатии */
+.nav-button:active {
+    transform: scale(0.95); /* Кнопка немного сжимается при нажатии */
+}
+
+/* Стили для изображений */
+.nav-button img {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5)); /* Тень для иконок */
+    transition: transform 0.2s ease; /* Плавный переход для иконок */
+}
+
+/* Эффект при наведении на иконки */
+.nav-button:hover img {
+    transform: rotate(10deg); /* Легкий поворот иконки при наведении */
+}
+
+/* Стили для текста в кнопках */
+.nav-button p {
+    margin-top: 6px;
+    color: white; /* Цвет текста остается белым */
+    font-size: 14px;
+    font-weight: 500; /* Легкая жирность для текста */
+    text-transform: uppercase; /* Заглавные буквы для стиля */
+    text-align: center; /* Центрирование текста */
+    transition: color 0.2s ease; /* Плавный переход для цвета текста */
+}
+
+/* Эффект при наведении на текст */
+.nav-button:hover p {
+    color: #fbbf24; /* Изменение цвета текста при наведении */
+}
+
+/* Блоки для анимации */
+.blob1 {
+    position: absolute;
+    width: 70px;
+    height: 100%;
+    border-radius: 16px;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(circle 60px at 0% 100%, #3b82f6, rgba(255, 255, 255, 0)); /* Обновленные цвета для анимации */
+    box-shadow: -10px 10px 30px rgba(255, 255, 255, 0.2);
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.blob2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle 60px at 100% 0%, white, #1e3a8a); /* Обновленные цвета для анимации */
+    z-index: -2;
+    transition: transform 0.3s ease;
+}
+
+/* Эффект при наведении на кнопку */
+.nav-button:hover .blob1 {
+    transform: scale(1.05); /* Легкое увеличение */
+}
+
+.nav-button:hover .blob2 {
+    transform: scale(1.05); /* Легкое увеличение */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .fixed-nav {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .nav-button {
+        padding: 10px; /* Меньшие внутренние отступы на мобильных устройствах */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-button p {
+        font-size: 12px; /* Уменьшение размера текста на очень маленьких экранах */
+    }
+
+    .nav-button img {
+        width: 28px; /* Уменьшение размера иконок */
+        height: 28px;
+    }
+
+    .nav-button {
+        flex: 0 1 25%; /* Позволяет кнопкам занимать меньше места на маленьких экранах */
+    }
+}
+@media (max-width: 600px) {
+    .header {
+      font-size: 20px;
+    }
+  
+    .main-screen {
+      padding: 10px;
+    }
+  
+    .nav-link {
+      font-size: 14px;
+    }
+  }
